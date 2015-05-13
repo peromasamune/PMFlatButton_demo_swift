@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F17CAF31B034FCD0049921A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17CAF21B034FCD0049921A /* AppDelegate.swift */; };
+		9F17CAF51B034FCD0049921A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17CAF41B034FCD0049921A /* ViewController.swift */; };
+		9F17CAF81B034FCD0049921A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F17CAF61B034FCD0049921A /* Main.storyboard */; };
+		9F17CAFA1B034FCD0049921A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F17CAF91B034FCD0049921A /* Images.xcassets */; };
+		9F17CAFD1B034FCD0049921A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F17CAFB1B034FCD0049921A /* LaunchScreen.xib */; };
+		9F17CB091B034FCD0049921A /* PMFlatButton_demo_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17CB081B034FCD0049921A /* PMFlatButton_demo_swiftTests.swift */; };
+		9F17CB131B034FF70049921A /* PMFlatButton in Resources */ = {isa = PBXBuildFile; fileRef = 9F17CB121B034FF70049921A /* PMFlatButton */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F17CB031B034FCD0049921A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F17CAE51B034FCD0049921A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F17CAEC1B034FCD0049921A;
+			remoteInfo = PMFlatButton_demo_swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F17CAED1B034FCD0049921A /* PMFlatButton_demo_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PMFlatButton_demo_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F17CAF11B034FCD0049921A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F17CAF21B034FCD0049921A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F17CAF41B034FCD0049921A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F17CAF71B034FCD0049921A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F17CAF91B034FCD0049921A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9F17CAFC1B034FCD0049921A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9F17CB021B034FCD0049921A /* PMFlatButton_demo_swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMFlatButton_demo_swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F17CB071B034FCD0049921A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F17CB081B034FCD0049921A /* PMFlatButton_demo_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMFlatButton_demo_swiftTests.swift; sourceTree = "<group>"; };
+		9F17CB121B034FF70049921A /* PMFlatButton */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PMFlatButton; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F17CAEA1B034FCD0049921A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F17CAFF1B034FCD0049921A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F17CAE41B034FCD0049921A = {
+			isa = PBXGroup;
+			children = (
+				9F17CB121B034FF70049921A /* PMFlatButton */,
+				9F17CAEF1B034FCD0049921A /* PMFlatButton_demo_swift */,
+				9F17CB051B034FCD0049921A /* PMFlatButton_demo_swiftTests */,
+				9F17CAEE1B034FCD0049921A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F17CAEE1B034FCD0049921A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F17CAED1B034FCD0049921A /* PMFlatButton_demo_swift.app */,
+				9F17CB021B034FCD0049921A /* PMFlatButton_demo_swiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F17CAEF1B034FCD0049921A /* PMFlatButton_demo_swift */ = {
+			isa = PBXGroup;
+			children = (
+				9F17CAF21B034FCD0049921A /* AppDelegate.swift */,
+				9F17CAF41B034FCD0049921A /* ViewController.swift */,
+				9F17CAF61B034FCD0049921A /* Main.storyboard */,
+				9F17CAF91B034FCD0049921A /* Images.xcassets */,
+				9F17CAFB1B034FCD0049921A /* LaunchScreen.xib */,
+				9F17CAF01B034FCD0049921A /* Supporting Files */,
+			);
+			path = PMFlatButton_demo_swift;
+			sourceTree = "<group>";
+		};
+		9F17CAF01B034FCD0049921A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F17CAF11B034FCD0049921A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F17CB051B034FCD0049921A /* PMFlatButton_demo_swiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F17CB081B034FCD0049921A /* PMFlatButton_demo_swiftTests.swift */,
+				9F17CB061B034FCD0049921A /* Supporting Files */,
+			);
+			path = PMFlatButton_demo_swiftTests;
+			sourceTree = "<group>";
+		};
+		9F17CB061B034FCD0049921A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F17CB071B034FCD0049921A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F17CAEC1B034FCD0049921A /* PMFlatButton_demo_swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F17CB0C1B034FCD0049921A /* Build configuration list for PBXNativeTarget "PMFlatButton_demo_swift" */;
+			buildPhases = (
+				9F17CAE91B034FCD0049921A /* Sources */,
+				9F17CAEA1B034FCD0049921A /* Frameworks */,
+				9F17CAEB1B034FCD0049921A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PMFlatButton_demo_swift;
+			productName = PMFlatButton_demo_swift;
+			productReference = 9F17CAED1B034FCD0049921A /* PMFlatButton_demo_swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F17CB011B034FCD0049921A /* PMFlatButton_demo_swiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F17CB0F1B034FCD0049921A /* Build configuration list for PBXNativeTarget "PMFlatButton_demo_swiftTests" */;
+			buildPhases = (
+				9F17CAFE1B034FCD0049921A /* Sources */,
+				9F17CAFF1B034FCD0049921A /* Frameworks */,
+				9F17CB001B034FCD0049921A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F17CB041B034FCD0049921A /* PBXTargetDependency */,
+			);
+			name = PMFlatButton_demo_swiftTests;
+			productName = PMFlatButton_demo_swiftTests;
+			productReference = 9F17CB021B034FCD0049921A /* PMFlatButton_demo_swiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F17CAE51B034FCD0049921A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Taku Inoue";
+				TargetAttributes = {
+					9F17CAEC1B034FCD0049921A = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					9F17CB011B034FCD0049921A = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 9F17CAEC1B034FCD0049921A;
+					};
+				};
+			};
+			buildConfigurationList = 9F17CAE81B034FCD0049921A /* Build configuration list for PBXProject "PMFlatButton_demo_swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F17CAE41B034FCD0049921A;
+			productRefGroup = 9F17CAEE1B034FCD0049921A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F17CAEC1B034FCD0049921A /* PMFlatButton_demo_swift */,
+				9F17CB011B034FCD0049921A /* PMFlatButton_demo_swiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F17CAEB1B034FCD0049921A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F17CB131B034FF70049921A /* PMFlatButton in Resources */,
+				9F17CAF81B034FCD0049921A /* Main.storyboard in Resources */,
+				9F17CAFD1B034FCD0049921A /* LaunchScreen.xib in Resources */,
+				9F17CAFA1B034FCD0049921A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F17CB001B034FCD0049921A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F17CAE91B034FCD0049921A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F17CAF51B034FCD0049921A /* ViewController.swift in Sources */,
+				9F17CAF31B034FCD0049921A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F17CAFE1B034FCD0049921A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F17CB091B034FCD0049921A /* PMFlatButton_demo_swiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F17CB041B034FCD0049921A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F17CAEC1B034FCD0049921A /* PMFlatButton_demo_swift */;
+			targetProxy = 9F17CB031B034FCD0049921A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F17CAF61B034FCD0049921A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F17CAF71B034FCD0049921A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F17CAFB1B034FCD0049921A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F17CAFC1B034FCD0049921A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F17CB0A1B034FCD0049921A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F17CB0B1B034FCD0049921A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F17CB0D1B034FCD0049921A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PMFlatButton_demo_swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9F17CB0E1B034FCD0049921A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PMFlatButton_demo_swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9F17CB101B034FCD0049921A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PMFlatButton_demo_swiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PMFlatButton_demo_swift.app/PMFlatButton_demo_swift";
+			};
+			name = Debug;
+		};
+		9F17CB111B034FCD0049921A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PMFlatButton_demo_swiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PMFlatButton_demo_swift.app/PMFlatButton_demo_swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F17CAE81B034FCD0049921A /* Build configuration list for PBXProject "PMFlatButton_demo_swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F17CB0A1B034FCD0049921A /* Debug */,
+				9F17CB0B1B034FCD0049921A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F17CB0C1B034FCD0049921A /* Build configuration list for PBXNativeTarget "PMFlatButton_demo_swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F17CB0D1B034FCD0049921A /* Debug */,
+				9F17CB0E1B034FCD0049921A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9F17CB0F1B034FCD0049921A /* Build configuration list for PBXNativeTarget "PMFlatButton_demo_swiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F17CB101B034FCD0049921A /* Debug */,
+				9F17CB111B034FCD0049921A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F17CAE51B034FCD0049921A /* Project object */;
+}
