@@ -13,7 +13,7 @@
 		9F17CAFA1B034FCD0049921A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F17CAF91B034FCD0049921A /* Images.xcassets */; };
 		9F17CAFD1B034FCD0049921A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F17CAFB1B034FCD0049921A /* LaunchScreen.xib */; };
 		9F17CB091B034FCD0049921A /* PMFlatButton_demo_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17CB081B034FCD0049921A /* PMFlatButton_demo_swiftTests.swift */; };
-		9F17CB131B034FF70049921A /* PMFlatButton in Resources */ = {isa = PBXBuildFile; fileRef = 9F17CB121B034FF70049921A /* PMFlatButton */; };
+		9F17CB161B0350C20049921A /* PMFlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17CB151B0350C20049921A /* PMFlatButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		9F17CB021B034FCD0049921A /* PMFlatButton_demo_swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMFlatButton_demo_swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F17CB071B034FCD0049921A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F17CB081B034FCD0049921A /* PMFlatButton_demo_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMFlatButton_demo_swiftTests.swift; sourceTree = "<group>"; };
-		9F17CB121B034FF70049921A /* PMFlatButton */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PMFlatButton; sourceTree = "<group>"; };
+		9F17CB151B0350C20049921A /* PMFlatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PMFlatButton.swift; path = PMFlatButton/PMFlatButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 		9F17CAE41B034FCD0049921A = {
 			isa = PBXGroup;
 			children = (
-				9F17CB121B034FF70049921A /* PMFlatButton */,
+				9F17CB141B0350B40049921A /* PMFlatButton */,
 				9F17CAEF1B034FCD0049921A /* PMFlatButton_demo_swift */,
 				9F17CB051B034FCD0049921A /* PMFlatButton_demo_swiftTests */,
 				9F17CAEE1B034FCD0049921A /* Products */,
@@ -113,6 +113,14 @@
 				9F17CB071B034FCD0049921A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F17CB141B0350B40049921A /* PMFlatButton */ = {
+			isa = PBXGroup;
+			children = (
+				9F17CB151B0350C20049921A /* PMFlatButton.swift */,
+			);
+			name = PMFlatButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +203,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F17CB131B034FF70049921A /* PMFlatButton in Resources */,
 				9F17CAF81B034FCD0049921A /* Main.storyboard in Resources */,
 				9F17CAFD1B034FCD0049921A /* LaunchScreen.xib in Resources */,
 				9F17CAFA1B034FCD0049921A /* Images.xcassets in Resources */,
@@ -216,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F17CB161B0350C20049921A /* PMFlatButton.swift in Sources */,
 				9F17CAF51B034FCD0049921A /* ViewController.swift in Sources */,
 				9F17CAF31B034FCD0049921A /* AppDelegate.swift in Sources */,
 			);

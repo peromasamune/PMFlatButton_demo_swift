@@ -42,14 +42,7 @@ class PMFlatButton: UIView {
         }
     }
 
-    var bulrEffect : Bool = false{
-        didSet{
-            setBulrEffect()
-        }
-    }
-
     //Private
-    private var bulrView : UIToolbar?
     private var contentView : UIView?
     private var target : AnyObject?
     private var selector : Selector?
@@ -112,27 +105,6 @@ class PMFlatButton: UIView {
         }
     }
 
-    private func setBulrEffect(){
-        if(bulrEffect == true){
-            if (bulrView == nil){
-                bulrView = UIToolbar(frame: CGRectMake(0, -1, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) + 1))
-                bulrView?.layer.masksToBounds = true
-                bulrView?.layer.cornerRadius = 5.0
-                self.addSubview(bulrView!)
-                self.sendSubviewToBack(bulrView!)
-            }
-            bulrView?.hidden = false
-            contentView?.alpha = 0.8
-            textLabel?.alpha = 0.8
-        }else{
-            if (bulrView != nil){
-                bulrView?.hidden = true
-                contentView?.alpha = 1.0;
-                textLabel?.alpha = 1.0;
-            }
-        }
-    }
-
     //MARK: Touch Event
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         highlighted = true
@@ -152,7 +124,6 @@ class PMFlatButton: UIView {
         }
 
         if(touchPoint.x > CGRectGetWidth(self.bounds) || touchPoint.x < 0 || touchPoint.y > CGRectGetHeight(self.bounds) || touchPoint.y < 0){
-            self.highlighted = false
             touchesCancelled(touches, withEvent: event)
         }
     }
