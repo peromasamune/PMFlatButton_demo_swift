@@ -18,14 +18,14 @@ class PMFlatButton: UIView {
     //Public
     var lineColor : UIColor = (UIColor(red: 0.294, green: 0.431, blue: 0.988, alpha: 1.000)) {
         didSet{
-            if (contentView != nil) {contentView?.layer.borderColor = lineColor.CGColor}
-            if (textLabel != nil) {textLabel?.textColor = lineColor}
+            contentView.layer.borderColor = lineColor.CGColor
+            textLabel.textColor = lineColor
         }
     }
-    var disableColor : UIColor = UIColor.lightGrayColor()
-    var disableTextColor : UIColor = UIColor.whiteColor()
-    var highlightedTextColor : UIColor = UIColor.whiteColor()
-    var textLabel : UILabel?
+    var disableColor = UIColor.lightGrayColor()
+    var disableTextColor = UIColor.whiteColor()
+    var highlightedTextColor = UIColor.whiteColor()
+    var textLabel : UILabel!
 
     var highlighted : Bool = false {
         didSet{
@@ -34,17 +34,17 @@ class PMFlatButton: UIView {
     }
 
     var enabled : Bool = true {
-        willSet{
-            if (enabled != newValue){
-                self.userInteractionEnabled = newValue
+        didSet{
+            if (enabled != oldValue){
+                self.userInteractionEnabled = enabled
                 reloadButtonColors()
             }
         }
     }
 
     //Private
-    private var contentView : UIView?
-    private var target : AnyObject?
+    private var contentView : UIView!
+    private weak var target : AnyObject?
     private var selector : Selector?
     private var clickHandler: (() -> Void)?
 
@@ -56,22 +56,22 @@ class PMFlatButton: UIView {
         self.alpha = 1.0
 
         contentView = UIView(frame: CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame)))
-        contentView?.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
-        contentView?.backgroundColor = UIColor.clearColor()
-        contentView?.layer.borderColor = lineColor.CGColor
-        contentView?.layer.borderWidth = 1.0
-        contentView?.layer.cornerRadius = 5.0
-        contentView?.layer.masksToBounds = true
-        self.addSubview(contentView!)
+        contentView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+        contentView.backgroundColor = UIColor.clearColor()
+        contentView.layer.borderColor = lineColor.CGColor
+        contentView.layer.borderWidth = 1.0
+        contentView.layer.cornerRadius = 5.0
+        contentView.layer.masksToBounds = true
+        self.addSubview(contentView)
 
         textLabel = UILabel(frame: CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame)))
-        textLabel?.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
-        textLabel?.backgroundColor = UIColor.clearColor()
-        textLabel?.textColor = lineColor
-        textLabel?.numberOfLines = 0
-        textLabel?.textAlignment = NSTextAlignment.Center
-        textLabel?.font = UIFont.systemFontOfSize(14)
-        self.addSubview(textLabel!)
+        textLabel.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+        textLabel.backgroundColor = UIColor.clearColor()
+        textLabel.textColor = lineColor
+        textLabel.numberOfLines = 0
+        textLabel.textAlignment = NSTextAlignment.Center
+        textLabel.font = UIFont.systemFontOfSize(14)
+        self.addSubview(textLabel)
     }
 
     //MARK: Property Method
@@ -79,29 +79,27 @@ class PMFlatButton: UIView {
 
     //MARK: Class Method
     func setText(text: NSString){
-        if (textLabel != nil){
-            textLabel?.text = text as String
-        }
+        textLabel.text = text as String
     }
 
-    func addTarget(target: AnyObject, selector: Selector){
+    func setTarget(target: AnyObject, selector: Selector){
         self.target = target;
         self.selector = selector
     }
 
-    func addClickHandler(handler : () -> Void){
+    func setClickHandler(handler : () -> Void){
         self.clickHandler = handler
     }
 
     //MARK: Private Method
     private func reloadButtonColors(){
         if(enabled == true){
-            contentView?.backgroundColor = (highlighted) ? lineColor : UIColor.clearColor()
-            textLabel?.textColor = (highlighted) ? highlightedTextColor : lineColor
+            contentView.backgroundColor = (highlighted) ? lineColor : UIColor.clearColor()
+            textLabel.textColor = (highlighted) ? highlightedTextColor : lineColor
         }else{
-            contentView?.backgroundColor = disableColor
-            contentView?.layer.borderColor = disableColor.CGColor
-            textLabel?.textColor = disableTextColor
+            contentView.backgroundColor = disableColor
+            contentView.layer.borderColor = disableColor.CGColor
+            textLabel.textColor = disableTextColor
         }
     }
 
@@ -134,7 +132,8 @@ class PMFlatButton: UIView {
         }
 
         if (target != nil && selector != nil && target!.respondsToSelector(selector!)){
-            NSThread.detachNewThreadSelector(selector!, toTarget: target!, withObject: nil)
+            var control : UIControl = UIControl()
+            control.sendAction(selector!, to: target, forEvent: nil)
         }
 
         if (clickHandler != nil){
