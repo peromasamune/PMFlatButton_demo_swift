@@ -26,6 +26,8 @@ class PMFlatButton: UIView {
     var disableTextColor = UIColor.whiteColor()
     var highlightedTextColor = UIColor.whiteColor()
     var textLabel : UILabel!
+    var borderWidth : CGFloat = 1.0
+    var cornerRadius : CGFloat = 5.0
 
     var highlighted : Bool = false {
         didSet{
@@ -59,8 +61,8 @@ class PMFlatButton: UIView {
         contentView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
         contentView.backgroundColor = UIColor.clearColor()
         contentView.layer.borderColor = lineColor.CGColor
-        contentView.layer.borderWidth = 1.0
-        contentView.layer.cornerRadius = 5.0
+        contentView.layer.borderWidth = borderWidth
+        contentView.layer.cornerRadius = cornerRadius
         contentView.layer.masksToBounds = true
         self.addSubview(contentView)
 
@@ -72,6 +74,12 @@ class PMFlatButton: UIView {
         textLabel.textAlignment = NSTextAlignment.Center
         textLabel.font = UIFont.systemFontOfSize(14)
         self.addSubview(textLabel)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.layer.borderWidth = borderWidth
+        contentView.layer.cornerRadius = cornerRadius
     }
 
     //MARK: Property Method
