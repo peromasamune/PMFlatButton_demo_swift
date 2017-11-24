@@ -14,17 +14,17 @@ class PMFlatButton: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    //MARK: Properties
+    //MARK: - Properties
     //Public
     var lineColor : UIColor = (UIColor(red: 0.294, green: 0.431, blue: 0.988, alpha: 1.000)) {
         didSet{
-            contentView.layer.borderColor = lineColor.CGColor
+            contentView.layer.borderColor = lineColor.cgColor
             textLabel.textColor = lineColor
         }
     }
-    var disableColor = UIColor.lightGrayColor()
-    var disableTextColor = UIColor.whiteColor()
-    var highlightedTextColor = UIColor.whiteColor()
+    var disableColor : UIColor = .lightGray
+    var disableTextColor : UIColor = .white
+    var highlightedTextColor : UIColor = .white
     var textLabel : UILabel!
     var borderWidth : CGFloat = 1.0
     var cornerRadius : CGFloat = 5.0
@@ -38,7 +38,7 @@ class PMFlatButton: UIView {
     var enabled : Bool = true {
         didSet{
             if (enabled != oldValue){
-                self.userInteractionEnabled = enabled
+                self.isUserInteractionEnabled = enabled
                 reloadButtonColors()
             }
         }
@@ -50,29 +50,29 @@ class PMFlatButton: UIView {
     private var selector : Selector?
     private var clickHandler: (() -> Void)?
 
-    //MARK: Initializer
+    //MARK: - Initializer
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = .clear
         self.alpha = 1.0
 
-        contentView = UIView(frame: CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame)))
-        contentView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
-        contentView.backgroundColor = UIColor.clearColor()
-        contentView.layer.borderColor = lineColor.CGColor
+        contentView = UIView(frame: CGRect(x:0, y:0, width:frame.width, height:frame.height))
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        contentView.backgroundColor = .clear
+        contentView.layer.borderColor = lineColor.cgColor
         contentView.layer.borderWidth = borderWidth
         contentView.layer.cornerRadius = cornerRadius
         contentView.layer.masksToBounds = true
         self.addSubview(contentView)
 
-        textLabel = UILabel(frame: CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame)))
-        textLabel.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
-        textLabel.backgroundColor = UIColor.clearColor()
+        textLabel = UILabel(frame: CGRect(x:0, y:0, width:frame.width, height:frame.height))
+        textLabel.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        textLabel.backgroundColor = .clear
         textLabel.textColor = lineColor
         textLabel.numberOfLines = 0
-        textLabel.textAlignment = NSTextAlignment.Center
-        textLabel.font = UIFont.systemFontOfSize(14)
+        textLabel.textAlignment = .center
+        textLabel.font = UIFont.systemFont(ofSize:14)
         self.addSubview(textLabel)
     }
     
@@ -82,72 +82,68 @@ class PMFlatButton: UIView {
         contentView.layer.cornerRadius = cornerRadius
     }
 
-    //MARK: Property Method
-
-
-    //MARK: Class Method
-    func setText(text: NSString){
+    //MARK: - Class Method
+    func setText(_ text: NSString){
         textLabel.text = text as String
     }
 
-    func setTarget(target: AnyObject, selector: Selector){
+    func setTarget(_ target: AnyObject, selector: Selector){
         self.target = target;
         self.selector = selector
     }
 
-    func setClickHandler(handler : () -> Void){
+    func setClickHandler(handler : @escaping () -> Void){
         self.clickHandler = handler
     }
 
-    //MARK: Private Method
+    //MARK: - Private Method
     private func reloadButtonColors(){
         if(enabled == true){
-            contentView.backgroundColor = (highlighted) ? lineColor : UIColor.clearColor()
+            contentView.backgroundColor = (highlighted) ? lineColor : .clear
             textLabel.textColor = (highlighted) ? highlightedTextColor : lineColor
         }else{
             contentView.backgroundColor = disableColor
-            contentView.layer.borderColor = disableColor.CGColor
+            contentView.layer.borderColor = disableColor.cgColor
             textLabel.textColor = disableTextColor
         }
     }
 
     //MARK: Touch Event
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         highlighted = true
     }
-
-    override func touchesCancelled(touches: Set<NSObject>!, withEvent event: UIEvent!) {
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         highlighted = false
     }
 
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
 
-        let touch = touches.first as? UITouch
-
-        var touchPoint : CGPoint = CGPointZero
+        var touchPoint : CGPoint = .zero
         if let _touch = touch{
-            touchPoint = _touch.locationInView(self)
+            touchPoint = _touch.location(in: self)
         }
-
-        if(touchPoint.x > CGRectGetWidth(self.bounds) || touchPoint.x < 0 || touchPoint.y > CGRectGetHeight(self.bounds) || touchPoint.y < 0){
-            touchesCancelled(touches, withEvent: event)
+        
+        if(touchPoint.x > self.bounds.width || touchPoint.x < 0 || touchPoint.y > self.bounds.height || touchPoint.y < 0){
+            touchesCancelled(touches, with: event)
         }
     }
-
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (!highlighted){
             return
         }
-
-        if (target != nil && selector != nil && target!.respondsToSelector(selector!)){
-            var control : UIControl = UIControl()
-            control.sendAction(selector!, to: target, forEvent: nil)
+        
+        if (target != nil && selector != nil && target!.responds(to: selector!)){
+            let control : UIControl = UIControl()
+            control.sendAction(selector!, to: target, for: nil)
         }
-
+        
         if (clickHandler != nil){
             clickHandler!()
         }
-
+        
         highlighted = false
     }
 }
