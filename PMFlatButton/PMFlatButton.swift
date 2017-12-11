@@ -83,8 +83,8 @@ class PMFlatButton: UIView {
     }
 
     //MARK: - Class Method
-    func setText(_ text: NSString){
-        textLabel.text = text as String
+    func setText(_ text: String){
+        textLabel.text = text
     }
 
     func setTarget(_ target: AnyObject, selector: Selector){
